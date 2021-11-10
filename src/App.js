@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import TodoList from "./components/TodoList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    todos: [
+      { id: "id-1", text: "Выучить основы React", completed: true },
+      { id: "id-2", text: "Робота c REST API", completed: false },
+      { id: "id-2", text: "Разобраться с React Router", completed: false },
+      { id: "id-3", text: "Пережить Redux", completed: false },
+      { id: "id-3", text: "Redux Toolkit", completed: false },
+      { id: "id-3", text: "JWT(JSON Web Token)", completed: false },
+    ],
+  };
+
+  deleteTodo = (todoId) => {
+    this.setState((prevState) => ({
+      todos: prevState.todos.filter((todo) => todo.id !== todoId),
+    }));
+  };
+
+  render() {
+    const { todos } = this.state;
+
+    const totalTodoCount = todos.length;
+
+    const completedTodoCount = todos.reduce(
+      (acc, todo) => (todo.completed ? acc + 1 : acc),
+      0
+    );
+
+    return (
+      <>
+        <h1>To do List</h1>
+        <div>
+          <p>Общее кол-во todo: {totalTodoCount}</p>
+          <p>Количество выполненных: {completedTodoCount}</p>
+        </div>
+
+        <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+      </>
+    );
+  }
 }
 
 export default App;
