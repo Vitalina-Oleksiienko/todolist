@@ -31,8 +31,8 @@ class App extends Component {
 
     return (
       <>
-        <h1>To do List</h1>
-        <div>
+        <h1 className="TodoList-title">To do List</h1>
+        <div className="TodoList-count">
           <p>Общее кол-во todo: {totalTodoCount}</p>
           <p>Количество выполненных: {completedTodoCount}</p>
         </div>

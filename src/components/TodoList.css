@@ -1,5 +1,13 @@
+.TodoList-title {
+  text-align: center;
+}
+.TodoList-count {
+  text-align: center;
+}
 .TodoList {
   width: 600px;
+  margin: 0 auto 0 auto;
+  padding-left: 0;
 }
 
 .TodoList__item {
