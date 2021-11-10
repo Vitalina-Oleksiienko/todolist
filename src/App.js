@@ -1,23 +1,12 @@
-// import React, { Component } from "react";
-// import TodoList from "./components/TodiList/TodoList";
-
 // class App extends Component {
 //   state = {
-//     todos: [
-//       { id: "id-1", text: "Выучить основы React", completed: true },
-//       { id: "id-2", text: "Робота c REST API", completed: false },
-//       { id: "id-3", text: "Разобраться с React Router", completed: false },
-//       { id: "id-4", text: "Пережить Redux", completed: false },
-//       { id: "id-5", text: "Redux Toolkit", completed: false },
-//       { id: "id-6", text: "JWT(JSON Web Token)", completed: false },
-//     ],
+//     todos:
 //   };
 
 import React, { Component } from "react";
 import shortid from "shortid";
-// import ColorPicker from './components/ColorPicker';
 // import Counter from './components/Counter';
-import Container from "./components/Container";
+import Container from "./components/Container/Container";
 import TodoList from "./components/TodiList/TodoList";
 import TodoEditor from "./components/TodoEditor/TodoEditor";
 import Filter from "./components/Filter";
