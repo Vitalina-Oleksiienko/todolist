@@ -6,10 +6,10 @@ class App extends Component {
     todos: [
       { id: "id-1", text: "Выучить основы React", completed: true },
       { id: "id-2", text: "Робота c REST API", completed: false },
-      { id: "id-2", text: "Разобраться с React Router", completed: false },
-      { id: "id-3", text: "Пережить Redux", completed: false },
-      { id: "id-3", text: "Redux Toolkit", completed: false },
-      { id: "id-3", text: "JWT(JSON Web Token)", completed: false },
+      { id: "id-3", text: "Разобраться с React Router", completed: false },
+      { id: "id-4", text: "Пережить Redux", completed: false },
+      { id: "id-5", text: "Redux Toolkit", completed: false },
+      { id: "id-6", text: "JWT(JSON Web Token)", completed: false },
     ],
   };
 
